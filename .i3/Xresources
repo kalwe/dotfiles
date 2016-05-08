@@ -1,0 +1,37 @@
+xterm*depth:                 32
+xterm*background:            #000000
+xterm*foreground:            #14db49
+xterm*borderless: 1
+xterm*scrollBar:            false
+xterm*scrollBar_right:      false
+xterm*saveLines:  5000
+xterm*tintColor: grey 
+xterm*shading: 50 
+xterm*termName:    rxvt-256color
+
+! Black
+xterm*color0:                 #262729
+xterm*color8:                 #262729
+! Red
+xterm*color1:                 #f92671
+xterm*color9:                 #ff669d
+!Green
+xterm*color2:                 #14db49
+xterm*color10:                #a2e655
+! Yellow
+xterm*color3:                 #fd971f
+xterm*color11:                #e6db74
+! Blue
+xterm*color4:                 #1692d0
+xterm*color12:                #66d9ef
+! Magenta
+xterm*color5:                 #9e6ffe
+xterm*color13:                #df92f6
+! Cyan
+xterm*color6:                 #5e7175
+xterm*color14:                #a3babf
+! White
+xterm*color7:                 #ffffff
+xterm*color15:                #ffffff
+! Cursor
+xterm*cursorColor:            #14db49
