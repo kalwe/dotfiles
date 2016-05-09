@@ -1,6 +1,8 @@
 #!/bin/bash
 #
 
+# not work like expected
+
 if [ "$1" -eq '-l' ]; then
 	ls /dev | grep sd
 elif [ "$#" -eq 2 ]; then 
