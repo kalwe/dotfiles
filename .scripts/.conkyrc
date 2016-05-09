@@ -1,0 +1,15 @@
+ckground    	no
+out_to_console 	yes
+out_to_x		no
+update_interval	2
+total_run_times	0
+short_units		yes
+pad_percents	3
+override_utf8_locale yes
+
+TEXT
+,[{"full_text": " "},
+  {"full_text": " $cpu%","icon":"/path/to/icons/cpu.xbm","color": "\#99D7FF"},
+  {"full_text": " $memfree", "icon":"/path/to/icons/mem.xbm", "color":"\#F3D194"},
+  {"full_text": " "}
+]
