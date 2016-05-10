@@ -118,7 +118,7 @@ alias ls='ls --color'
 alias ll='ls -lh --color'
 alias la='ls -lah --color'
 alias l='ls -lAh --color'
-alias ldot='ls -a --color | egrep ^\.*'
+alias ldot='ls -a --color | egrep \^\\.'
 alias ldev='ls /dev | grep sd'
 alias lz='ls $HOME/.zsh'
 
