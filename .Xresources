@@ -1,6 +1,9 @@
 Urxvt*font:             xft:Bitstream Vera Sans Mono:size=12
 Urxvt*termName:         rxvt
 
+!Urxvt*background: black
+!Urxvt*foreground: green
+
 URxvt.scrollBar:        false
 
 Urxvt*perl-lib:         /usr/lib/urxvt/perl/
@@ -25,12 +28,6 @@ Xft*hinting:            full
 Rxvt.transparent:   true
 URxvt.tintColor:     white
 URxvt.shading:     40 
-
-! Background color
-URxvt*background: black 
-
-! Font color
-URxvt*foreground: green 
 
 URxvt*pointerColorBackground:	red
 URxvt*pointerColorForeground:	green
