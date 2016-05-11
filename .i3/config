@@ -160,24 +160,24 @@ bar {
 	colors {
 
 	### SCHEMA 0
-							#BORDER		#BACKGROUND		#TEXT
+							    #BORDER		#BACKGROUND		#TEXT
 		focused_workspace  		#EE0000 	#00C1FF 		#000000
-        	active_workspace   		#f7003a 	#00CDFD		 	#ffffff
-        	inactive_workspace 		#333333 	#222222 		#888888
+       	active_workspace   		#f7003a 	#00CDFD		 	#ffffff
+       	inactive_workspace 		#333333 	#222222 		#888888
 	
-		background #000000
-		separator #00EE00
+		background 		#000000
+		separator  		#00EE00
 
 	### SCHEMA 1	
-					   #border	#back	#font
-		focused_workspace  #DD2525 #FF0000 #FFFFFF
-        	#active_workspace  #333333 #5f676a #ffffff
-        	inactive_workspace #333333 #661515 #AAAAAA
-        	urgent_workspace   #aa0000 #990000 #888888
+					       #border #back   #font
+		#focused_workspace  #DD2525 #FF0000 #FFFFFF
+       	#active_workspace  #333333 #5f676a #ffffff
+       	#inactive_workspace #333333 #661515 #AAAAAA
+       	#urgent_workspace   #aa0000 #990000 #888888
 
 	}
 
-        status_command i3status
+    status_command i3status
 	#position top
 	#status_command conky -c ~/.conkyrc
 
@@ -192,10 +192,10 @@ client.unfocused		#000000		#666666			#000000		#C0C0C0
 
 ### SCHEMA 01
 #class					BORDER		BACKGROUND		TEXT		INDICATOR
-client.focused			#000000		#EE0000			#FFFFFF		#EE0000
+#client.focused			#000000		#EE0000			#FFFFFF		#EE0000
 #client.focused_inactive	#000000		#EE0000			#FFFFFF		#EE0000
-client.focused_inactive	#666666		#000000			#FFFFFF		#C0C0C0
-client.unfocused		#000000		#999999			#000000 	#C0C0C0
+#client.focused_inactive	#666666		#000000			#FFFFFF		#C0C0C0
+#client.unfocused		#000000		#999999			#000000 	#C0C0C0
 #client.unfocused		#666666		#100000			#C0C0C0 	#C0C0C0
 
 #
@@ -234,7 +234,7 @@ bindsym $mod+F9 exec amixer set Master 5%+
 
 # not work well * YOUR NEED USE PNG IMG
 # lockscreen
-bindsym $mod+Ctrl+l exec i3lock -u -i /home/kal-desk/Downloads/Cyberpunk-1600x900.jpg
+bindsym $mod+Ctrl+l exec i3lock -u -i /home/jotun-dt/nitro/shodan_ascii_by_lomoco.png
 
 # restore background img
 exec --no-startup-id exec nitrogen --restore
@@ -246,7 +246,7 @@ exec --no-startup-id exec volumeicon &
 # own shotcuts
 
 # load layout
-bindsym $mod+g exec ~/.i3/load_layout.sh
+#bindsym $mod+g exec ~/.i3/load_layout.sh
 
 # bindsym $mod+m exec --no-startup-id i3-msg 'workspace 3:Web; exec /usr/bin/iceweasel'
 bindsym $mod+Shift+f exec --no-startup-id exec /usr/bin/firefox
