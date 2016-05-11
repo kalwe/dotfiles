@@ -2,7 +2,7 @@
 #
 # functions executed by command line
 
-# -------------------------------------------------------------------
+# extract function
 ex() {
     if [[ -f $1 ]]; then
         case $1 in
@@ -27,11 +27,9 @@ ex() {
     fi
 }
 
-# -------------------------------------------------------------------
 # any function from http://onethingwell.org/post/14669173541/any
 # search for running processes
-# -------------------------------------------------------------------
-any() {
+srp) {
     emulate -L zsh
     unsetopt KSH_ARRAYS
     if [[ -z "$1" ]] ; then
@@ -42,9 +40,7 @@ any() {
     fi
 }
 
-# -------------------------------------------------------------------
 # display a neatly formatted path
-# -------------------------------------------------------------------
 paths() {
   echo $PATH | tr ":" "\n" | \
     awk "{ sub(\"/usr\",   \"$fg_no_bold[green]/usr$reset_color\"); \
@@ -55,30 +51,22 @@ paths() {
            print }"
 }
 
-# -------------------------------------------------------------------
 # nice mount (http://catonmat.net/blog/another-ten-one-liners-from-commandlingfu-explained)
 # displays mounted drive information in a nicely formatted manner
-# -------------------------------------------------------------------
-function nicemount() { (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2="";1') | column -t ; }
+#function nicemount() { (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2="";1') | column -t ; }
 
-# -------------------------------------------------------------------
-# myIP address
-# -------------------------------------------------------------------
+# my local ip address
 function myip() {
-  ifconfig lo | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo       : " $2}'
-  ifconfig enp2s0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "enp2s0 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
-	# ifconfig |awk '/inet addr/{print substr($2,6)}'
+    ifconfig lo | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo       : " $2}'
+	ifconfig enp2s0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "enp2s0 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
+	#ifconfig |awk '/inet addr/{print substr($2,6)}'
 }
 
-# -------------------------------------------------------------------
 # (s)ave or (i)nsert a directory.
-# -------------------------------------------------------------------
 s() { pwd > ~/.save_dir ; }
 i() { cd "$(cat ~/.save_dir)" ; }
 
-# -------------------------------------------------------------------
 # console function
-# -------------------------------------------------------------------
 function console () {
   if [[ $# > 0 ]]; then
     query=$(echo "$*"|tr -s ' ' '|')
@@ -88,10 +76,8 @@ function console () {
   fi
 }
 
-# -------------------------------------------------------------------
 # shell function to define words
 # http://vikros.tumblr.com/post/23750050330/cute-little-function-time
-# -------------------------------------------------------------------
 givedef() {
   if [[ $# -ge 2 ]] then
     echo "givedef: too many arguments" >&2
