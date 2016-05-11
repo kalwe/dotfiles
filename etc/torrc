@@ -25,7 +25,7 @@ TransPort 9040
 # Using TorDNS for all dns queries,
 # change DNSPort 53 and set in /etc/resolv.conf for local host
 # echo "nameserver 127.0.0.1" >> /etc/resolv.conf
-# or you can use dnsmasq server=127.0.0.1#9053
+# or you can use dnsmasq server=127.0.0.1#0053
 DNSPort 0053
 DNSListenAddress 127.0.0.1
 AutomapHostsOnResolve 1
