@@ -113,6 +113,7 @@ alias scrot='scrot -q 100'
 alias zip='zip -r'
 alias cdh='cd $HOME'
 alias hist='history 0'
+
 # ls
 alias ls='ls --color'
 alias ll='ls -lh --color'
@@ -129,6 +130,7 @@ alias vbc='VBoxManage controlvm'
 
 
 # iptables
+alias firelog='journalctl -k -f | grep FIREWALL'
 alias fires='fireoff && fireon'
 alias fireon='iptables-restore < $HOME/.iptables/iptables.net'
 alias fireoff='iptables-restore < $HOME/.iptables/iptables.default'
