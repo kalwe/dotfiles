@@ -97,7 +97,7 @@ alias chapou='poweroff'
 
 
 alias cp='cp -riv'
-alias mv='mv -riv'
+alias mv='mv -iv'
 
 #
 # My own alias
