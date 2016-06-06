@@ -28,9 +28,11 @@ alias 'filecount=find . -type f | wc -l' # number of files (not directories)
 #
 alias gitc='vim $HOME/.gitconfig'
 alias g='git'
-alias ga='git add'
-alias gaf='git add -f'
+alias ga='git add -v'
+alias gaf='git add -f -v'
 alias gaa='git add .'
+#alias gA='git add -A -v --no-verify'
+alias gA='git add -A -v'
 alias grm='git rm --cache'
 alias git rm='git rm --cache'
 alias gps='git push'
