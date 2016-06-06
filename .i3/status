@@ -9,13 +9,13 @@ colors = true
 color_good = "#00FF00"
 interval = 1
 }
-order += "ipv6"
+#order += "ipv6"
 #order += "disk /"
 #order += "run_watch DHCP"
 #order += "run_watch VPN"
 order += "wireless wlp2s0"
 #order += "ethernet eth0"
-order += "battery 1"
+#order += "battery 1"
 order += "cpu_usage"
 order += "volume master"
 #order += "load"

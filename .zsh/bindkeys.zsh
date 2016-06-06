@@ -9,6 +9,9 @@ bindkey "^[[1~"   beginning-of-line
 bindkey "^[[F"    end-of-line
 bindkey "^[[4~"   end-of-line
 
+bindkey -s '^[[24' 'pwd\n'							   # f12
+
+#bindkey -s "^L"	  'exec /usr/bin/clear'				   # ctrl-l
 bindkey "^L"	  clear-screen						   # ctrl-l
 bindkey "^K"      kill-whole-line                      # ctrl-k
 bindkey "^R"      history-incremental-search-backward  # ctrl-r

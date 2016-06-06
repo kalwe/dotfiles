@@ -93,6 +93,10 @@ alias reset='reboot'
 alias falou='halt'
 alias chapou='poweroff'
 
+
+alias cp='cp -riv'
+alias mv='mv -riv'
+
 #
 # My own alias
 #
@@ -113,6 +117,10 @@ alias scrot='scrot -q 100'
 alias zip='zip -r'
 alias cdh='cd $HOME'
 alias hist='history 0'
+alias mkfs.ntfs='mkfs.ntfs --fast'
+
+# kill xorg
+alias killx='sudo pkill X'
 
 # ls
 alias ls='ls --color'
@@ -160,6 +168,7 @@ alias ping4='ping -c4'
 # pacman
 alias pacsy='pacman -Syy'
 alias pacsu='pacman -Syu'
+alias pacsuu='yaourt -Syu --aur --noconfirm'
 alias pacs='pacman -S'
 alias pacss='pacman -Ss |grep '
 alias pacr='pacman -R'

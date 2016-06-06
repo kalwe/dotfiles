@@ -10,6 +10,10 @@
 #	unset f
 #fi
 
+#i3x() {
+#	if [ -x "/usr/bin/" ]; then
+#}
+
 # [[ -f $HOME/.Xresources ]] && xrdb -load $HOME/.Xresources &
 
 # load Xresources user config  
@@ -22,7 +26,7 @@ xrandr --output DVI-0 --auto --right-of HDMI-0
 idth 9 --transparent true --tint 0x000000 --height 12 &
 
 # touchpad need to work with i3 
-xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 8 9 0 0 1 2 3
+#xinput set-prop "ETPS/2 Elantech Touchpad" "Synaptics Tap Action" 8 9 0 0 1 2 3
 
 # start GUI
 case $1 in
