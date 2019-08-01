@@ -1,9 +1,7 @@
 # .bash_profile
 
 # Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
-fi
+[[ -f "$HOME/.bashrc" ]] && . "$HOME/.bashrc"
 
 # User specific environment and startup programs
 
