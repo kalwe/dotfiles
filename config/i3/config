@@ -1,0 +1,246 @@
+# i3 config file (v4)
+
+#set $mod Mod4
+set $mod Mod1
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:monospace 8
+# provides lots of unicode glyphs
+font pango:DejaVu Sans Mono 8
+
+# use Mouse+$mod to drag floating windows
+#floating_modifier Mod1
+
+# start a terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec urxvt256c
+
+# kill focused window
+#bindsym $mod+Shift+q kill
+bindsym $mod+q kill
+
+# start dmenu (a program launcher)
+#bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run -sb '#33aadd' -sf '#e3e3e3' -nf '#e3e3e3' -p 'RUN ->>'
+bindsym $mod+d exec dmenu_run -sb '#029c46' -sf '#101010' -nf '#029b46' -p 'RUN ->>'
+
+# (new) i3-dmenu-desktop only show displays applications
+# shipping a .desktop file. It is a wrapper around dmenu, so you need that
+# installed.
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+# change focus
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# move focused window
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# split
+# split in horizontal and vertical
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# fullscreen mode for focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+#bindsym $mod+d focus child
+
+# switch to workspace 
+bindsym $mod+1 workspace 1: 
+bindsym $mod+2 workspace 2:dev 
+bindsym $mod+3 workspace 3:w 
+bindsym $mod+4 workspace 4:media ♪
+bindsym $mod+5 workspace 5:dev
+bindsym $mod+6 workspace 6:aux
+bindsym $mod+7 workspace 7:aux
+bindsym $mod+8 workspace 8:test 
+bindsym $mod+9 workspace 9:aux
+bindsym $mod+0 workspace 10:aux
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace 1: 
+bindsym $mod+Shift+2 move container to workspace 2:dev 
+bindsym $mod+Shift+3 move container to workspace 3:w 
+bindsym $mod+Shift+4 move container to workspace 4:media ♪
+bindsym $mod+Shift+5 move container to workspace 5:dev
+bindsym $mod+Shift+6 move container to workspace 6:aux
+bindsym $mod+Shift+7 move container to workspace 7:aux
+bindsym $mod+Shift+8 move container to workspace 8:test 
+bindsym $mod+Shift+9 move container to workspace 9:aux
+bindsym $mod+Shift+0 move container to workspace 10:aux
+
+# reload config file
+bindsym $mod+Shift+c reload
+# reload i3-wm (preserve layout/session)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+# bindsym $mod+Shift+p exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+        bindsym j resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym l resize shrink height 10 px or 10 ppt
+        bindsym semicolon resize grow width 10 px or 10 ppt
+
+        # same bindings, but for the arrow keys
+        bindsym Left resize shrink width 2 px or 2 ppt
+        bindsym Down resize grow height 2 px or 2 ppt
+        bindsym Up resize shrink height 2 px or 2 ppt
+        bindsym Right resize grow width 2 px or 2 ppt
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+##############
+# arc colors #
+##############
+# arch blue:            #1793d1
+# arch blue dark:       #265e7a
+# arch blue light:      #33aadd
+# arch background:      #333333
+# arch text:            #e3e3e3
+# arch text dark:	    #949494
+
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+bar {
+    colors {
+
+		background              #101010
+        statusline              #029b46
+        separator               #029b46
+
+        focused_workspace       #029c00 #029b46 #010101
+		active_workspace 		#029c00 #029b46 #ffffff
+
+
+		#separator   #00ff00
+
+		#background #000000
+		#statusline #ffffff
+		#separator #666666
+
+        # SCHEMA 0              BORDER      BACKGROUND      TEXT
+        #focused_workspace       #9A12B3     #663399         #DCC6E0
+    	# colorclass        	<border>    <background> <text>
+		#focused_workspace   	#33aadd     #265e7a     #e3e3e3
+        #active_workspace    	#333333     #265e7a     #101010
+		inactive_workspace  	#333333     #222222     #949494
+  	    urgent_workspace 	    #222222     #990000	    #e3e3e3
+    }
+
+	# status_command i3status -c ~/.config/i3/i3status.conf
+	status_command py3status -c ~/.config/i3/i3status.conf
+	#font xft:FontAwesome 9
+	font pango: Awesome 8
+}
+
+#colors for windows         border  backgrd text    indict
+client.focused              #029b48 #02b948 #010101 #010101
+client.focused_inactive     #444444 #010101 #02b948 #181818
+client.unfocused            #222222 #010101 #949494 #181818
+client.urgent 				#029b48 #010101 #181818 #181818
+
+# class                 border  backgr. text    indicator
+#client.focused          #1f3a93 #33aadd #e3e3e3 #33aadd
+#client.focused_inactive #333333 #5f676a #101010 #484e50
+#client.unfocused        #333333 #222222 #949494 #292d2e
+#client.urgent 		    #222222 #990000 #ffffff #990000
+
+# adicional
+new_window 1pixel
+bindsym $mod+t border normal
+bindsym $mod+y border 1pixel
+bindsym $mod+u border none
+
+# lockscreen
+# bindsym $mod+Ctrl+l exec i3lock -u -i ~/Downloads/wallpapers/bmw-gun.png
+
+# jump to urgent window
+bindsym $mod+x [urgent=lastest] focus
+
+# lock, logout, suspend, hibernate and reboot/shutdown system
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Pause mode "$mode_system"
+
+# my custom bindsym`s
+bindsym $mod+Shift+f exec /usr/bin/firefox # start firefox
+bindsym $mod+Shift+g exec google-chrome # start google chrome
+# bindsym $mod+Shift+e exec thunar # start thunar
+bindsym $mod+Shift+e exec nautilus
+bindsym $mod+Shift+m exec /usr/bin/vlc # start vlc
+bindsym $mod+Shift+v exec pavucontrol # pavucontrol
+#bindsym $mod+Shift+v exec /usr/bin/virtualbox
+#bindsym $mod+Shift+p exec ~/scripts/crons/randomchangebackground.sh
+bindsym $mod+Shift+p exec feh --bg-scale `find "${HOME}/.wallpaper/" -type f | sort -R | tail -1`
+
+#bindsym $mod+Ctrl+l exec i3lock -i /home/kalwe/.wallpaper/dark/B945UqbIcAAkDTi.png
+bindsym $mod+Ctrl+l exec /home/klw/scripts/bash/i3/i3lockblur.sh
+
+# Sound Control # its already works by default with volumeicon, but not in i3-wm
+bindsym XF86AudioRaiseVolume exec amixer set 'Master' 4%+
+bindsym XF86AudioLowerVolume exec amixer set 'Master' 4%-
+bindsym XF86AudioMute exec amixer set Master toggle
+
+# my custom exec`s
+#exec --no-startup-id feh --bg-scale ~/Downloads/ZKR9aKt.jpg
+exec --no-startup-id nm-applet # nm-applet - network manager applet
+exec --no-startup-id xfce4-power-manager # display brightness
+exec --no-startup-id volumeicon & # management volume, not work
+
+# workaround
+exec ~/.xsession
+

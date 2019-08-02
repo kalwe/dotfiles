@@ -1,0 +1,63 @@
+! .Xresources
+
+! XTerm
+XTerm*cterName: xterm-color
+XTerm*faceName: Bitstream Vera Serif Mono
+
+! Fonts
+URxvt*font:	            xft:DejaVu Sans Mono:pixelsize=13
+URxvt*boldFont:         xft:DejaVu Sans Mono:pixelsize=13
+!URxvt*boldFont:         xft:Monospace:pixelsize=13
+URxvt*letterSpace:	    -1
+
+!URxvt*termName:	    screen-256color
+URxvt.title:		    URxvt
+URxvt*saveLines:	    65536
+
+! real transparency (xcompmgr, dcompmgr, compiz)
+!URxvt*inheritPixmap: true
+URxvt*transparent: true
+!URxvt*shading: 0 to 99 darkens, 101 to 200 lightens
+!URxvt*shading: 95
+*.shading: 25
+
+! fake transparency
+!URxvt*background:	black
+*background:		black
+*foreground:		#00ff00
+*foreground:		#029b48
+
+! Pointer
+!urxvt*depth:			32
+!urxvt*background:		rgba:0000/0000/0200/c800
+!*.depth:			32
+!*.background:		rgba:0000/0000/0200/c800
+URxvt.depth:			32
+URxvt.background:		rgba:0000/0000/0200/c800
+! junta a de cima com a de baixo pra fila gaylal
+URxvt*pointerColor:	    #ff0000
+URxvt*pointerColor2:	#ffffff
+
+! Cursor
+URxvt*cursorColor:		#ff0000
+URxvt*cursorUnderline:	true
+URxvt*cursorBlink:		true
+
+! Scrollbar
+!URxvt*scrollBar:	false
+!URxvt*scrollStyle:	rxvt
+*scrollBar:	    	false
+*scrollStyle:		rxvt
+
+URxvt*url-launcher:	    /usr/bin/firefox
+URxvt*match.button:	    1
+
+URxvt*color4:	black
+urxvt*color15:	black
+
+! Perl extensions
+URxvt*perl-ext-common:  default,matcher
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
