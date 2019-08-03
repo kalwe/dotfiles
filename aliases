@@ -1,0 +1,21 @@
+alias ..='cd ..'
+
+alias ldot='ls -aF | grep ^\\.'
+alias ldev="ls /dev | grep -E '^sd.'"
+
+alias freem='$HOME/local/bin/free -m'
+alias xmerge='xrdb -merge $HOME/.Xresources'
+alias psu='ps -U $USER'
+alias fetch='neofetch'
+alias chownu='chown -R $USER:$USER'
+alias reboot='doas /sbin/reboot'
+alias halt='doas /sbin/halt -p'
+
+alias upgrade='pkg_add -u'
+alias pkgaddv='pkg_add xv'
+alias pkgadds='pkg_add -s' # dryrun
+alias pkgsearch='pkg_info -Q'
+alias pkgdelete='pkg_delete -ai
+alias pkglist="pkg_info -zm | tr -d'-' | column"
+
+alias pflog='tcpdump -ttt -nle -i pflog0'

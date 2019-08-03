@@ -1,0 +1,4 @@
+sshd_flags=NO
+xenodm_flags=
+pkg_scripts="dbus_daemon avahi_daemon"
+dbus_enable="YES"

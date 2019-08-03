@@ -1,0 +1,27 @@
+color activeborder		"#26a65b"
+color inactiveborder	"#abb7b7"
+color urgencyborder		"#cf000f"
+color font				"#26a65b"
+color selfont			"#f22613"
+color menubg			"#24252a"
+color menufg			"#26a65b"
+
+ignore xclock
+snapdist 1
+sticky yes
+gap 5 5 5 5
+
+bind-key 4-r	window-hide
+
+autogroup 1		"xterm"
+autogroup 2		"URxvt"
+autogroup 3		"Firefox"
+autogroup 9		"xclock"
+
+bind-key CM-s		"bin/scrot '%Y%m%d_$wx$h_scrot.png' -e 'mv $f ~/pictures/screenshots/'"
+bind-key CM-p		"bin/scrot -s -e 'mv $f ~/pictures/screenshots'"
+
+command rxvt-unicode	"urxvt -title urxvt"
+# command htop		"xterm -tn htop -geometry 79x16+5+528 -e htop"
+command htop		"urxvt -title htop -geometry 59x15+5+528 -e htop"
+command chbg		"/bin/sh -c 'feh --bg-scale $(find $HOME/.wallpaper/ -type f | sort -R | tail -1)'"

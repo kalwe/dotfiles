@@ -1,9 +1,6 @@
-#!/bin/sh
-
-# .xsession execute by Xorg when logged in graphical mode
-
+export LC_CTYPE='en_US.UTF-8'
 [[ -s "$HOME/.Xresources" ]] && xrdb -merge $HOME/.Xresources
-[[ -s "$HOME/.fehbg" ]] && sh $HOME/.fehbg &
-
-xrandr --output HDMI-1 --left-of LVDS-1 # --mode 1366x768
-
+[[ -s "$HOME/.fehbg" ]] && sh $HOME/.fehbg
+xidle &
+xclock &
+cwm
