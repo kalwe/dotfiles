@@ -1,0 +1,9 @@
+# pre-define functions to local user
+
+gbranch() {
+	DIR=`pwd`
+	if [ -d "$DIR/.git" ]; then
+		git branch 2> /dev/null |
+		sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+	fi
+}
