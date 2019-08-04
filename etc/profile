@@ -1,0 +1,19 @@
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
+export PATH
+
+[ -z "$HOSTNAME" ] && export HOSTNAME=`hostname | cut -d. -f1`
+
+EDITOR=vi
+test -x "/usr/local/bin/vim" && EDITOR=vim
+export EDITOR
+
+alias ll='ls -lh'
+alias la='ls -Flah'
+
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+
+alias egrep='grep -E'
+alias igrep='grep -i'
+alias vgrep='grep -v'
